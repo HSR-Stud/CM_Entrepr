@@ -16,10 +16,10 @@ before_script:
 - pwd
 script:
 # Prefix command with travis_wait x so it times out after 3 mins, because when the LaTeX doesn't compile pdflatex just hangs instead of quitting.
-- travis_wait 3 pdflatex -interaction=nonstopmode -halt-on-error ./CM_PrivLaw.tex
+- travis_wait 3 pdflatex -interaction=nonstopmode -halt-on-error ./CM_Entrepr.tex
 # - bibtex ./Vorlage.aux
-- travis_wait 3 pdflatex -interaction=nonstopmode -halt-on-error ./CM_PrivLaw.tex
-- travis_wait 3 pdflatex -interaction=nonstopmode -halt-on-error ./CM_PrivLaw.tex
+- travis_wait 3 pdflatex -interaction=nonstopmode -halt-on-error ./CM_Entrepr.tex
+- travis_wait 3 pdflatex -interaction=nonstopmode -halt-on-error ./CM_Entrepr.tex 
 
 before_deploy:
 - dir
@@ -28,7 +28,7 @@ deploy:
   api_key:
     secure: $GITHUB_RELEASE_TOKEN
   file:
-    - ./CM_PrivLaw.pdf
+    - ./CM_Entrepr.pdf
   skip_cleanup: true
   on:
     tags: true
