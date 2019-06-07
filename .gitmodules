@@ -1,0 +1,6 @@
+[submodule "Travis"]
+	path = Travis
+	url = https://github.com/HSR-Stud/Travis.git
+[submodule "header"]
+	path = header
+	url = https://github.com/HSR-Stud/header.git
